@@ -28,6 +28,7 @@ jobs:
             head -n -1 src/wordlist.js > src/wordlist_temp.js
             mv src/wordlist_temp.js src/wordlist.js
             echo -e ",\"${SOLUTION^^}\"\n];" >> src/wordlist.js
+            rm wordle-data.json
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
