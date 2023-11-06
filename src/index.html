@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wordle Answers</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @media (max-width: 768px) {
+            /* Adjust font size for smaller devices */
+            .jumbotron h1 {
+                font-size: 24px; /* You can adjust the font size as needed */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Add Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="wordlist.js"></script>
+    <!-- Header Section -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Find Old Wordle Answers</h1>
+        </div>
+    </div>
+
+    <!-- Search Input and Results Section -->
+    <div class="container">
+        <div class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Enter a word" oninput="showSuggestions()">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="searchWord()">Search</button>
+            </div>
+        </div>
+        
+        <ul id="suggestions" class="list-group">
+            <!-- Suggestions will be displayed here -->
+        </ul>
+    </div>
+
+    <script>
+        function searchWord() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            for (var i = 0; i < wordList.length; i++) {
+                if (wordList[i].toLowerCase().includes(input)) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = wordList[i];
+                    listItem.classList.add('list-group-item');
+                    resultsContainer.appendChild(listItem);
+                }
+            }
+        }
+
+        function showSuggestions() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var suggestionsContainer = document.getElementById('suggestions');
+            suggestionsContainer.innerHTML = '';
+
+            for (var i = 0; i < wordList.length; i++) {
+                if (wordList[i].toLowerCase().startsWith(input)) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = wordList[i];
+                    listItem.classList.add('list-group-item');
+                    suggestionsContainer.appendChild(listItem);
+                }
+            }
+        }
+
+        // Display all words when the page loads
+        window.addEventListener('load', function() {
+            var allWordsContainer = document.getElementById('suggestions');
+            for (var i = 0; i < wordList.length; i++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = wordList[i];
+                listItem.classList.add('list-group-item');
+                allWordsContainer.appendChild(listItem);
+            }
+        });
+
+        document.getElementById('searchInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchWord();
+            }
+        });
+    </script>
+</body>
+</html>
