@@ -1,0 +1,35 @@
+name: Fetch Wordle Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Schedule the workflow to run daily at midnight UTC
+
+jobs:
+  fetch-wordle-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Fetch Wordle Data
+        run: |
+            # Get the current date in YYYY-MM-DD format
+            DATE=$(date -d yesterday -u +"%Y-%m-%d")
+            
+            # Define the URL
+            URL="https://www.nytimes.com/svc/wordle/v2/$DATE.json"
+            
+            # Use curl to fetch the data
+            curl -o wordle-data.json $URL
+            
+            # Extract the solution from the JSON data
+            SOLUTION=$(jq -r '.solution' wordle-data.json)
+            head -n -1 src/wordlist.js > src/wordlist_temp.js
+            mv src/wordlist_temp.js src/wordlist.js
+            echo -e ",\"${SOLUTION^^}\"\n];" >> src/wordlist.js
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+            commit_message: Added todays answer
