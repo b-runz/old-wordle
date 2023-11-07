@@ -10,25 +10,28 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+            token: ${{ secrets.PAT }}
 
       - name: Fetch Wordle Data
         run: |
             # Get the current date in YYYY-MM-DD format
             DATE=$(date -d yesterday -u +"%Y-%m-%d")
-            
+
             # Define the URL
             URL="https://www.nytimes.com/svc/wordle/v2/$DATE.json"
-            
+
             # Use curl to fetch the data
             curl -o wordle-data.json $URL
-            
+
             # Extract the solution from the JSON data
             SOLUTION=$(jq -r '.solution' wordle-data.json)
-            head -n -1 src/wordlist.js > src/wordlist_temp.js
-            mv src/wordlist_temp.js src/wordlist.js
-            echo -e ",\"${SOLUTION^^}\"\n];" >> src/wordlist.js
-            rm wordle-data.json
+            mv src/wordlist.js wordlist_temp_with_head.js
+            echo -e "var wordList = [\n\"${SOLUTION^^}\"," > src/wordlist.js
+            tail -n +2 wordlist_temp_with_head.js > wordlist_temp_no_head.js
+            cat wordlist_temp_no_head.js >> src/wordlist.js
+            rm wordle-data.json wordlist_temp_no_head.js wordlist_temp_with_head.js
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
