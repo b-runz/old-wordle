@@ -1,8 +1,11 @@
 name: Fetch Wordle Data
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Schedule the workflow to run daily at midnight UTC
+    schedule:
+        - cron: '0 0 * * *' # Schedule the workflow to run daily at midnight UTC
+    pull_request:
+        types:
+            - opened
 
 jobs:
   fetch-wordle-data:
