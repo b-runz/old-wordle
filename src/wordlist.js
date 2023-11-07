@@ -1,4 +1,5 @@
 var wordList = [
+"TRADE",
 "FLARE", 
 "MANIA", 
 "ARDOR", 
