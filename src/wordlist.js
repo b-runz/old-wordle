@@ -1,4 +1,5 @@
 var wordList = [
+"WORST",
 "ADAPT",
 "GENRE",
 "TAKEN",
