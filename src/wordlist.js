@@ -1,4 +1,5 @@
 var wordList = [
+"TOPIC",
 "WOULD",
 "SPENT",
 "THESE",
