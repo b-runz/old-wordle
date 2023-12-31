@@ -1,4 +1,5 @@
 var wordList = [
+"THREE",
 "CHILD",
 "LEARN",
 "DAISY",
