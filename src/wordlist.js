@@ -1,4 +1,5 @@
 var wordList = [
+"REPEL",
 "VERGE",
 "MICRO",
 "CLEFT",
