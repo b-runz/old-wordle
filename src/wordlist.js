@@ -1,4 +1,5 @@
 var wordList = [
+"AFTER",
 "WHICH",
 "REPEL",
 "VERGE",
