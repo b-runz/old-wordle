@@ -1,4 +1,5 @@
 var wordList = [
+"STIFF",
 "PLACE",
 "AFTER",
 "WHICH",
