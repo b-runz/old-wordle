@@ -1,4 +1,5 @@
 var wordList = [
+"HUNCH",
 "FLAME",
 "STATE",
 "URBAN",
