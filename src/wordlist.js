@@ -1,4 +1,5 @@
 var wordList = [
+"MEDIA",
 "JERKY",
 "PIOUS",
 "MUSTY",
