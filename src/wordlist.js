@@ -1,4 +1,5 @@
 var wordList = [
+"CUMIN",
 "OUTER",
 "TIDAL",
 "MEDIA",
