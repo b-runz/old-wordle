@@ -1,4 +1,5 @@
 var wordList = [
+"SKIER",
 "BEVEL",
 "TITAN",
 "GLIDE",
