@@ -1,4 +1,5 @@
 var wordList = [
+"PAPAL",
 "MINUS",
 "SKIER",
 "BEVEL",
