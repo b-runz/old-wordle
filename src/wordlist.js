@@ -1,4 +1,5 @@
 var wordList = [
+"CADET",
 "SPECK",
 "SHAFT",
 "REFER",
