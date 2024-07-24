@@ -1,4 +1,5 @@
 var wordList = [
+"PRONG",
 "CADET",
 "SPECK",
 "SHAFT",
