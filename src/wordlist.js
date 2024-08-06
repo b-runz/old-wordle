@@ -1,4 +1,5 @@
 var wordList = [
+"ENSUE",
 "LOWER",
 "SCALE",
 "FLAKE",
