@@ -1,4 +1,5 @@
 var wordList = [
+"RECUR",
 "BROAD",
 "HARSH",
 "BRASS",
