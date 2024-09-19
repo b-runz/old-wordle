@@ -1,4 +1,5 @@
 var wordList = [
+"FULLY",
 "BEAUT",
 "HONEY",
 "RECUR",
