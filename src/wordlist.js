@@ -1,4 +1,5 @@
 var wordList = [
+"FLOWN",
 "STOIC",
 "INNER",
 "SWELL",
