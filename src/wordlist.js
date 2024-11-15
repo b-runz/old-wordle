@@ -1,4 +1,5 @@
 var wordList = [
+"UVULA",
 "PRIMP",
 "FLOWN",
 "STOIC",
