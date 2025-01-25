@@ -1,4 +1,5 @@
 var wordList = [
+"CREPE",
 "UPPER",
 "REACH",
 "ICING",
