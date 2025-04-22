@@ -1,4 +1,5 @@
 var wordList = [
+"SPATE",
 "PATCH",
 "INBOX",
 "DIRGE",
