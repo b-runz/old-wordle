@@ -1,4 +1,5 @@
 var wordList = [
+"TRIPE",
 "BALMY",
 "MACHO",
 "SUITE",
