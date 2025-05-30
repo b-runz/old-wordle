@@ -1,4 +1,5 @@
 var wordList = [
+"QUASH",
 "POLAR",
 "SPORT",
 "DRONE",
