@@ -1,4 +1,5 @@
 var wordList = [
+"FOIST",
 "UNDID",
 "GNOME",
 "EXILE",
