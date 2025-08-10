@@ -1,4 +1,5 @@
 var wordList = [
+"NASAL",
 "IMBUE",
 "CORAL",
 "GROAN",
