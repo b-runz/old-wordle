@@ -1,4 +1,5 @@
 var wordList = [
+"GRAFT",
 "SPLIT",
 "TOWER",
 "ANNEX",
