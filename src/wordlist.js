@@ -1,4 +1,5 @@
 var wordList = [
+"LATHE",
 "GLARE",
 "HOLLY",
 "FETID",
