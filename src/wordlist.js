@@ -1,4 +1,5 @@
 var wordList = [
+"FUGUE",
 "ARISE",
 "PERIL",
 "GUISE",
