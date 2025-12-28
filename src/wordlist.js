@@ -1,4 +1,5 @@
 var wordList = [
+"BATCH",
 "SPEED",
 "PRISM",
 "SPOOL",
