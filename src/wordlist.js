@@ -1,4 +1,5 @@
 var wordList = [
+"SUMAC",
 "FIERY",
 "RACER",
 "CHASM",
