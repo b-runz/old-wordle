@@ -1,4 +1,5 @@
 var wordList = [
+"VEGAN",
 "SCENE",
 "CELLO",
 "EMBED",
