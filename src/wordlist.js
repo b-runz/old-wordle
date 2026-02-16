@@ -1,4 +1,5 @@
 var wordList = [
+"SKULL",
 "BLOOM",
 "MOOCH",
 "SURGE",
