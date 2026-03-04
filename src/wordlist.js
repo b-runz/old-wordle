@@ -1,4 +1,5 @@
 var wordList = [
+"LINEN",
 "SLIME",
 "FLUKE",
 "HYDRA",
